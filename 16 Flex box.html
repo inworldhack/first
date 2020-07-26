@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+<style>
+    .conta {
+        border: solid 3px red;
+        height: 388px;
+        width: 100%;
+        background-color: rgb(241, 231, 231);
+        display: flex;
+        /* Direction of box without reverse and with reverse */
+        /* flex direction default is 'row' */
+        /* flex-direction: row; */
+        /* flex direction of column  */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        /* Flex warp is default is nowarp */
+        /* flex-wrap: wrap; */
+        /* Reverse */
+        /* flex-wrap: wrap-reverse; */
+        /* Shortcut of flex direction and flex warp  */
+        flex-flow: wrap row;
+
+        /* content is center  */
+        /* justify-content: center; */
+        /* content ke around, i means content ke first left and last right ke charo tarf space nhi rhegi */
+        /* justify-content: space-between; */
+        /* content ke charo taraf equal space rahega */
+        /* justify-content: space-evenly; */
+        /* Every content ke charo taraf se equal duri hai */
+        /* justify-content: space-around; */
+
+        /* content is centare */
+        align-items: center;
+        /* content is buttom */
+        align-items: flex-end;
+        /* content is default */
+        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    .item {
+        border: 4px solid green;
+        border-radius: 8px;
+        background-color: rgb(126, 20, 55);
+        margin: 9px 5px;
+        width: 150px;
+        height: 150px;
+        font-size: 33px;
+        /* text-align: center; */
+        color: white;
+    }
+
+    #item-1 {
+        /* jiska order of value bada hoga usko last me dikhya jayega */
+        order: 0;
+        /* jiska flex-grow value bada hoga uska size v bada hoga or jika chhota hoga uska size v chhota hoga  */
+        /* flex-grow: 4; */
+        /* content ke size ko chhota karen me madad karta hai  */
+        /* flex-shrink: 5; */
+    }
+
+    #item-2 {
+        order: 0;
+        /* flex-grow: 3; */
+        /* flex-shrink: 2; */
+        flex-basis: 133px;
+        /* flex-direction jab row rahega to iska width badhega */
+        /* flex-direction jab column rahega to iska height badhega */
+    }
+
+    #item-3 {
+        /* shortcut of flex: flex-grow flex-shrink flex-basis  */
+        /* flex: 1 2 222px; */
+        /* align-self: in button; */
+        align-self: flex-end;
+        /* align-self: in default; */
+        align-self: flex-start;
+        /* align-self: in center; */
+        align-self: center;
+    }
+</style>
+
+<body>
+    <h2>This is Flex Box </h2>
+    <div class="conta">
+        <div class="item" id="item-1">First</div>
+        <div class="item" id="item-2">Second</div>
+        <div class="item" id="item-3">Third</div>
+        <div class="item" id="item-4">Forth</div>
+        <div class="item" id="item-5">Fifth</div>
+        <div class="item" id="item-6">Sixth</div>
+    </div>
+</body>
+
+</html>
